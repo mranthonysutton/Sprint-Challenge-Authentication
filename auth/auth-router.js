@@ -70,7 +70,7 @@ router.post('/login', validateUserCredentials, (req, res) => {
         const token = signToken(user);
         res.set('authorization', token);
 
-        res.status(200).json({token, message: `Welcome ${user}!`});
+        res.status(200).json({token, message: `Welcome ${user.username}!`});
       } else {
         res.status(401).json({error: 'Invalid credentials were provided.'});
       }
