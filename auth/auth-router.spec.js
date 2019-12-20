@@ -3,6 +3,28 @@ const db = require("../database/dbConfig.js");
 const server = require("../api/server.js");
 
 describe("auth-router", function() {
+  // describe('POST /REGISTER', function() {
+  //   beforeEach(async function() {
+  //     await db('users').truncate();
+  //   });
+
+  //   it('should return a json', async function() {
+  //     const response = await request(server)
+  //       .post('/api/auth/register')
+  //       .send({username: 'anthony', password: 'password'});
+
+  //     expect(response.type).toMatch(/json/i);
+  //   });
+
+  //   it('Adds user to the DB', async function() {
+  //     const response = await request(server)
+  //       .post('/api/auth/register')
+  //       .send({username: 'bacon', password: 'password'});
+
+  //     expect(response.body.username).toBe('bacon');
+  //   });
+  // });
+
   describe("POST /register", function() {
     beforeEach(async function() {
       await db("users").truncate();
